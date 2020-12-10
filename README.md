@@ -8,12 +8,13 @@
   * projektowania struktury danych
   * wykorzystania typów generycznych
   * implementacji i wykorzystania interfejsu `IEnumerable<T>`
+  * wykorzystanie `Dictionary<TKey, TValue>`
 
 ## Sformułowanie problemu
 
 Twoim zadaniem jest zaimplementowanie struktury danych `MultiSet<T>` opisującej _multizbiór_. Multizbiór jest rozszerzeniem koncepcji zbioru (w sensie matematycznym), umożliwia zapamiętanie duplikatów elementów.
 
-Struktura ta przydaje się w wielu praktycznych sytuacjach. W bibliotekach C# nie została zrealizowana (a jest np. w STL/C++). Struktura o podobnych właściwościach, dostosowana do programowania współbieżnego, jest zaimplementowana w przestrzeni nazw `System.Collections.Concurent`: [`ConcurentBag<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentbag-1).
+Struktura ta przydaje się w wielu praktycznych sytuacjach. W bibliotekach C# nie została zrealizowana (a jest np. w STL/C++). Struktura o podobnych właściwościach, dostosowana do programowania współbieżnego, jest zaimplementowana w przestrzeni nazw `System.Collections.Concurrent`: [`ConcurrentBag<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentbag-1).
 
 * Zrealizuj implementację multizbioru opakowując, obiekt typu `Dictionary<T, int>` funkcjonalnościami wskazanymi w interfejsie `IMultiSet<T>` dołączonemu do ćwiczenia. 
 
