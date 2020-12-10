@@ -1,62 +1,61 @@
 using System.Collections.Generic;
 
-
-
 namespace km.Collections.MultiZbior
 {
     /// <summary>
     /// MultiSet, to rozszerzenie koncepcji zbioru, dopuszczające przechowywanie duplikatów elementów 
     /// </summary>
     /// <remarks>
-    /// * Reprezentacja wewnętrzna: `Dictionary<T>, int>`
-    /// * Reprezentacja "zewnetrzna" obiektów typu `MultiSet<T>` (np. produkowana przez ToString()): 
-    ///   + forma rozwinięta: `{a, a, b, b, b, d}`
-    ///   + forma skondensowana: `{2*a, 3*b, 1*d}`
+    /// * Reprezentacja wewnętrzna: `Dictionary<T, int>`
     /// * Porządek zapamiętania elementów jest bez znaczenia, zatem {a, b, a} jest tym samym multizbiorem, co {a, a, b}
     /// * W konstruktorze można przekazać informację o sposobie porównywania elementów (`IEqualityComparer<T>`)
     /// </remarks>
-    /// <typeparam name="T">dowolny typ</typeparam>
+    /// <typeparam name="T">dowolny typ, bez ograniczeń</typeparam>
 
     public interface IMultiSet<T> : ICollection<T>, IEnumerable<T>
     {
 
         #region === from ICollection<T> ============================================
+        /*
         // opis metod wymaganych do zaimplementowania z ICollection<T>
 
         // zwraca liczbę wszystkich elementów multizbioru (łącznie z duplikatami)
-        // public int Count { get; }
+        public int Count { get; }
 
         // zwraca `true` jeśli multibiór jest tylko do odczytu, `false` w przeciwnym przypadku
-        // public bool IsReadOnly { get; }
+        public bool IsReadOnly { get; }
 
         // dodaje element do multizbioru
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
-        // public void Add (T item);
+        public void Add (T item);
 
         // usuwa element z multizbioru, zwraca `true`, jesli operacja przebiegła pomyślnie, 
         // `false` w przeciwnym przypadku (elementu nie znaleziono)
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
-        // public bool Remove (T item);
+        public bool Remove (T item);
 
         // zwraca `true`, jeśli element należy do multizbioru
-        // public bool Contains (T item);
+        public bool Contains (T item);
 
         // usuwa wszystkie elementy z multizbioru
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
-        // public void Clear ();
+        public void Clear ();
 
         // kopiuje elementy multizbioru do tablicy, od wskazanego indeksu
-        // public void CopyTo (T[] array, int arrayIndex);
+        public void CopyTo (T[] array, int arrayIndex);
+
+        */
 
         // --- from IEnumerable<T> --------------------------
 
+        /*
         // zwraca iterator multizbioru (wariant generyczny)
-        // public IEnumerator<T> GetEnumerator();
+        public IEnumerator<T> GetEnumerator();
 
         // zwraca iterator multizbioru (wariant niegeneryczny)
         // C#8 default implementation
-        // IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        */
         #endregion -----------------------------------------------------------------
 
 
@@ -79,22 +78,21 @@ namespace km.Collections.MultiZbior
         // zwraca referencję tej instancji multizbioru (`this`)
         public MultiSet<T> RemoveAll(T item);
 
-
         // dodaje sekwencję `IEnumerable<T>` do multizbioru
-        // zgłasza `ArgumentNullException`, jeśli `other` jest `null`
+        // zgłasza `ArgumentNullException` jeśli `other` jest `null`
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
         // zwraca referencję tej instancji multizbioru (`this`)
         public MultiSet<T> UnionWith (IEnumerable<T> other);
 
         // modyfikuje bieżący multizbiór tak, aby zawierał tylko elementy wspólne z `other`
-        // zgłasza `ArgumentNullException`, jeśli `other` jest `null`
+        // zgłasza `ArgumentNullException` jeśli `other` jest `null`
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
         // zwraca referencję tej instancji multizbioru (`this`)
         public MultiSet<T> IntersectWith(IEnumerable<T> other);
 
         // modyfikuje bieżący multizbiór tak, aby zawierał tylko te 
         // które nie wystepują w `other`
-        // zgłasza `ArgumentNullException`, jeśli `other` jest `null`
+        // zgłasza `ArgumentNullException` jeśli `other` jest `null`
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
         // zwraca referencję tej instancji multizbioru (`this`)
         public MultiSet<T> ExceptWith(IEnumerable<T> other);
@@ -102,7 +100,7 @@ namespace km.Collections.MultiZbior
         // modyfikuje bieżący multizbiór tak, aby zawierał tylko te elementy
         // które wystepują w `other` lub występują w bieżacym multizbiorze,
         // ale nie wystepują równocześnie w obu
-        // zgłasza `ArgumentNullException`, jeśli `other` jest `null`
+        // zgłasza `ArgumentNullException` jeśli `other` jest `null`
         // zgłasza `NotSupportedException` jeśli multizbior jest tylko do odczytu
         // zwraca referencję tej instancji multizbioru (`this`)
         public MultiSet<T> SymmetricExceptWith(IEnumerable<T> other);
@@ -140,14 +138,14 @@ namespace km.Collections.MultiZbior
         // -------------------------
 
 
-        // zwraca, dla zadanego `item`, liczbę jego powtórzeń w multizbiorze
+        // indexer, zwraca, dla zadanego `item`, liczbę jego powtórzeń w multizbiorze
         public int this[T item] { get; }
 
         // zwraca MultiSet jako Dictionary
         public IReadOnlyDictionary<T, int> AsDictionary();
 
         // zwraca MultiSet jako Set, usuwając duplikaty
-        public IReadOnlySet<T> ToSet();
+        public IReadOnlySet<T> AsSet();
 
 
         // -------------------------
@@ -157,30 +155,32 @@ namespace km.Collections.MultiZbior
         // zwraca pusty multizbiór
         public static IMultiSet<T> Empty { get; }
 
+        /*
         // Konstruktor, tworzy pusty multizbiór
-        // public MultiSet();
+        public MultiSet();
 
         // Konstruktor, tworzy pusty multizbiór, w którym równość elementów zdefiniowana jest
         // za pomocą obiektu `comparer`
-        // public MultiSet(IEqualityComparer<T> comparer)
+        public MultiSet(IEqualityComparer<T> comparer)
 
         // Konstruktor, tworzy multizbiór wczytując wszystkie elementy z `sequence`
-        // public MultiSet(IEnumerable<T> sequence)
+        public MultiSet(IEnumerable<T> sequence)
 
         // Konstruktor, tworzy multizbiór wczytując wszystkie elementy z `sequence`
         // Równośc elementów zdefiniowana jest za pomocą obiektu `comparer`
-        // public MultiSet(IEnumerable<T> sequence, IEqualityComparer<T> comparer)
+        public MultiSet(IEnumerable<T> sequence, IEqualityComparer<T> comparer)
 
-        // tworzy nowy multizbiór jako sumę multizbiorów `first` i `other`
+        // tworzy nowy multizbiór jako sumę multizbiorów `first` i `second`
         // zwraca `ArgumentNullException`, jeśli którykolwiek z parametrów jest `null`
-        // public static IMultiSet<T> operator +(IMultiSet<T> first, IMultiSet<T> second);
+        public static IMultiSet<T> operator +(IMultiSet<T> first, IMultiSet<T> second);
 
-        // tworzy nowy multizbiór jako różnicę multizbiorów: od `first` odejmuje `other`
+        // tworzy nowy multizbiór jako różnicę multizbiorów: od `first` odejmuje `second`
         // zwraca `ArgumentNullException`, jeśli którykolwiek z parametrów jest `null`
-        // public static IMultiSet<T> operator -(IMultiSet<T> first, IMultiSet<T> second);
+        public static IMultiSet<T> operator -(IMultiSet<T> first, IMultiSet<T> second);
 
-        // tworzy nowy multizbiór jako część wspólną multizbiorów `first` oraz `other`
+        // tworzy nowy multizbiór jako część wspólną multizbiorów `first` oraz `second`
         // zwraca `ArgumentNullException`, jeśli którykolwiek z parametrów jest `null`
-        // public static IMultiSet<T> operator *(IMultiSet<T> first, IMultiSet<T> second);
+        public static IMultiSet<T> operator *(IMultiSet<T> first, IMultiSet<T> second);
+        */
     }
 }
