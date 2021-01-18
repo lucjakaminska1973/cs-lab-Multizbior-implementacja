@@ -1,0 +1,9 @@
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\bin\Debug\netcoreapp3.1\LibraryMultiSet.deps.json
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\bin\Debug\netcoreapp3.1\LibraryMultiSet.dll
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\bin\Debug\netcoreapp3.1\LibraryMultiSet.pdb
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\obj\Debug\netcoreapp3.1\LibraryMultiSet.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\obj\Debug\netcoreapp3.1\LibraryMultiSet.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\obj\Debug\netcoreapp3.1\LibraryMultiSet.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\obj\Debug\netcoreapp3.1\LibraryMultiSet.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\obj\Debug\netcoreapp3.1\LibraryMultiSet.dll
+C:\Users\Administrator\source\repos\MultiSett\LibraryMultiSet\obj\Debug\netcoreapp3.1\LibraryMultiSet.pdb

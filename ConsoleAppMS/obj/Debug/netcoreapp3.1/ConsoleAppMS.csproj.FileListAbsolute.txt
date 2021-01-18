@@ -1,0 +1,16 @@
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\ConsoleAppMS.exe
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\ConsoleAppMS.deps.json
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\ConsoleAppMS.runtimeconfig.json
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\ConsoleAppMS.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\ConsoleAppMS.dll
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\ConsoleAppMS.pdb
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\LibraryMultiSet.dll
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\bin\Debug\netcoreapp3.1\LibraryMultiSet.pdb
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.csproj.CopyComplete
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.dll
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.pdb
+C:\Users\Administrator\source\repos\MultiSett\ConsoleAppMS\obj\Debug\netcoreapp3.1\ConsoleAppMS.genruntimeconfig.cache

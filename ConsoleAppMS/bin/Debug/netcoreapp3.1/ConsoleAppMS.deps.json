@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ConsoleAppMS/1.0.0": {
+        "dependencies": {
+          "LibraryMultiSet": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleAppMS.dll": {}
+        }
+      },
+      "LibraryMultiSet/1.0.0": {
+        "runtime": {
+          "LibraryMultiSet.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleAppMS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibraryMultiSet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
